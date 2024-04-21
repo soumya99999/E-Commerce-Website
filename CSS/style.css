@@ -1,9 +1,25 @@
+
 body {
     height: 400vh;
     margin: 0;
     padding: 0;
     background-color: #000;
 }
+
+.social-icons {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    grid-area: 3 / 3; 
+}
+
+.social-icons a {
+    margin-left: 10px;
+    font-size: 24px;
+    color: white;
+}
+
+
 
 body::-webkit-scrollbar {
     display: none;
