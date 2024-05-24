@@ -1,16 +1,19 @@
-
 body {
-    height: 400vh;
+    height: 700vh;
     margin: 0;
     padding: 0;
-    background-color: #000;
+    /* background-color: #000; */
+}
+
+.main-Container {
+    display: grid;
 }
 
 .social-icons {
     position: absolute;
     bottom: 20px;
     right: 20px;
-    grid-area: 3 / 3; 
+    grid-area: 3 / 3;
 }
 
 .social-icons a {
@@ -18,8 +21,6 @@ body {
     font-size: 24px;
     color: white;
 }
-
-
 
 body::-webkit-scrollbar {
     display: none;
@@ -38,13 +39,14 @@ body::-webkit-scrollbar {
 }
 
 .navbar-contents {
-    display:flex;
+    display: flex;
     margin-right: 20px;
     align-items: center;
     justify-content: center;
     margin-right: 20px;
     flex: 1;
 }
+
 .logo {
     width: 60px;
     height: 60px;
@@ -56,7 +58,7 @@ body::-webkit-scrollbar {
     height: 100%;
     border-radius: 50%;
     box-shadow: 0 0 20px 5px rgb(255 255 255 / 40%);
-    position:static;
+    position: static;
     animation: rotate 1s forwards, scale 1s forwards;
     animation-delay: 0s, 1s;
 }
@@ -80,7 +82,7 @@ body::-webkit-scrollbar {
         transform: scale(1.5);
     }
 
-    100%{
+    100% {
         transform: scale(1);
     }
 }
@@ -90,21 +92,23 @@ body::-webkit-scrollbar {
     display: flex;
     flex-direction: row;
     align-items: center;
-    transform:translateY(-80px);
-    transition:0.9s all ease-in-out;
-}
-.Animation-header{
-    transform:translateX(-800px);
-    transition:1s all ease-in-out;
-}
-.Animation-appear{
-    opacity:1;
-    transform:translateX(0px);
+    transform: translateY(-80px);
+    transition: 0.9s all ease-in-out;
 }
 
-.Animation-appear-header{
-    opacity:1;
-    transform:translateY(0px);
+.Animation-header {
+    transform: translateX(-800px);
+    transition: 1s all ease-in-out;
+}
+
+.Animation-appear {
+    opacity: 1;
+    transform: translateX(0px);
+}
+
+.Animation-appear-header {
+    opacity: 1;
+    transform: translateY(0px);
 }
 
 .links li {
@@ -126,7 +130,7 @@ body::-webkit-scrollbar {
     display: block;
     height: 2px;
     width: 100%;
-    background-color: white; 
+    background-color: white;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -143,9 +147,8 @@ body::-webkit-scrollbar {
     }
 }
 
-
-
 @media screen and (max-width: 600px) {
+
     /* .links {
         display:none;
         position: fixed;
@@ -179,10 +182,9 @@ body::-webkit-scrollbar {
     .links {
         display: none;
         position: fixed;
-        top: -10px; 
+        top: -10px;
         right: 0;
         width: 30%;
-        background-color: rgba(0, 0, 0, 0.5);
         flex-direction: column;
         align-items: self-start;
         padding-left: 10px;
@@ -190,20 +192,21 @@ body::-webkit-scrollbar {
         z-index: 2;
         transition: all 0.3s ease;
     }
-    
+
     .links.active {
         display: flex;
     }
-    
+
     .links li a {
         display: block;
         margin: 10px 0;
         font-size: 16px;
         line-height: 24px;
         text-align: left;
-        color: white; 
-        text-decoration: none; 
+        color: white;
+        text-decoration: none;
     }
+
     .toggle-btn {
         display: flex;
         flex-direction: column;
@@ -236,16 +239,13 @@ body::-webkit-scrollbar {
     .toggle-btn.active span:nth-child(3) {
         transform: translateY(-10px) rotate(-45deg);
     }
-
 }
 
 @media screen and (max-width: 718px) {
-    .red-container{
-        display:none;
+    .red-container {
+        display: none;
     }
 }
-
-
 
 .container1 {
     display: grid;
@@ -256,7 +256,7 @@ body::-webkit-scrollbar {
 }
 
 h1 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 3rem;
     font-weight: 900;
     text-transform: uppercase;
@@ -276,7 +276,6 @@ h1 {
     color: white;
 }
 
-
 .red-container {
     grid-column: 2;
     grid-row: 1 / 4;
@@ -284,7 +283,6 @@ h1 {
     transform: skewX(328deg);
     animation: glow 1.5s infinite alternate;
 }
-
 
 @keyframes glow {
     0% {
@@ -295,8 +293,6 @@ h1 {
         box-shadow: 0 0 30px 10px red;
     }
 }
-
-
 
 .image-HeadPhone {
     position: absolute;
@@ -315,8 +311,6 @@ h1 {
         transform: translate(-50%, -50%) scale(1);
     }
 }
-
-
 
 .red-circle-container1 {
     position: absolute;
@@ -376,22 +370,19 @@ h1 {
 .Animation-left-earbud {
     animation: earbudSize 1s forwards;
     animation-delay: 0.5s;
-    opacity:0;
 }
 
 .Animation-right-earbud {
     animation: earbudSize 1s forwards;
     animation-delay: 1s;
-    opacity:0;
 }
 .Animation-left-earbud.active {
-    animation: none; 
+    animation: none;
 }
 
 .Animation-right-earbud.active {
-    animation: none; 
+    animation: none;
 }
-
 
 @keyframes bounce {
     0% {
@@ -413,3 +404,81 @@ h1 {
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
 }
+
+.container3 {
+    height: 15vh;
+    /* border:2px solid red; */
+    background-color: #212529;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.contents ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.contents ul li{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 30px;
+}
+
+.contents ul li i{
+    font-size: 1.5rem;
+}
+
+
+.feature p {
+    margin: 0;
+    font-size: 1rem;
+    text-align: center;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-style: italic;
+    color: #ffffff; 
+}
+
+@media screen and (max-width: 768px) {
+    .container3 {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .feature i {
+        font-size: 1.5rem;
+        margin-bottom: 3px;
+    }
+
+    .feature p {
+        font-size: 0.9rem;
+    }
+}
+
+.container4{
+    height:100vh;
+    border:2px solid black;
+    background-color:black;
+}
+
+
+
+.container5{
+    height:100vh;
+    border:2px solid black;
+    background-color:black;
+}
+
+
+.container6{
+    height:100vh;
+    border:2px solid red;
+    background-color:black;
+}
+
