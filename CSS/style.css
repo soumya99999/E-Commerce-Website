@@ -721,23 +721,6 @@ h1 {
     color: gold;
 }
 
-.item img:hover {
-    animation: grow_img 1.5s forwards;
-}
-
-@keyframes grow_img {
-    0% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(2);
-    }
-
-    100% {
-        transform: scale(1);
-    }
-}
 
 .item:nth-child(1),
 .item:nth-child(2),
