@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener('scroll', function() {
-    const descriptions = document.querySelectorAll('.Description ');
+    const descriptions = document.querySelectorAll('.Description');
     const windowHeight = window.innerHeight || document.documentElement.clientHeight;
 
     descriptions.forEach(description => {
@@ -125,7 +125,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 document.addEventListener("DOMContentLoaded", function() {
-    const image = document.querySelector(".above_image");
+    const image = document.querySelector(".animated_image");
     const description = document.querySelector(".description7");
 
     function isInViewport(element) {
