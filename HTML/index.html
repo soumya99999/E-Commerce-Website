@@ -10,11 +10,14 @@
 </head>
 
 <body>
-    <div class="main-Container">
+    <div id="loading-animation">
+        <div class="spinner"></div>
+    </div>
+    <div id="main-container" class="main-container hidden">
         <div class="background container1">
             <div class="navbar">
                 <div class="logo">
-                    <img src="../Images/logo-no-background.png" alt="Logo">
+                    <img src="../Images/logo-removebg-preview.png" alt="Logo">
                 </div>
                 <div class="toggle-btn" onclick="toggleNavbar()">
                     <span></span>
@@ -24,14 +27,77 @@
 
                 <div class="navbar-contents">
                     <ul class="links">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Shop</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="#" class="home-link" >Home</a></li>
+                        <li><a href="../HTML/shop.html">Shop</a></li>
+                        <li><a href="../HTML/Blog.html">Blog</a></li>
+                        <li><a href="#" id="about-link">About</a></li>
+                        <li><a href="#" id="contact-link">Contact</a></li>
+                        <li><a href="#" id="signUpLink">Sign Up</a></li>
+                        <li><a href="#" id="signInLink">Sign In</a></li>
                         <li><a href="#"><i class="fas fa-shopping-cart"></i> </a></li>
                     </ul>
                 </div>
+
+                <!-- Sign Up Form -->
+                <div id="signUpForm" class="form-container">
+                    <div class="form-content">
+                        <span class="close-btn" id="closeSignUp">&times;</span>
+                        <h2>Sign Up</h2>
+                        <form>
+                            <div class="input-wrapper">
+                                <label class="Label">Name</label>
+                                <input type="text" required>
+                            </div>
+                            <div class="input-wrapper">
+                                <label class="Label">Email</label>
+                                <input type="email" required>
+                            </div>
+                            <div class="input-wrapper">
+                                <label class="Label">Phone Number</label>
+                                <input type="tel" required>
+                            </div>
+                            <div class="input-wrapper password-container">
+                                <label class="Label">Password</label>
+                                <input type="password" required id="password">
+                                <i class="eye-icon" onclick="togglePassword('password')">&#128065;</i>
+                            </div>
+                            <div class="input-wrapper password-container">
+                                <label class="Label">Confirm Password</label>
+                                <input type="password" required id="confirmPassword">
+                                <i class="eye-icon" onclick="togglePassword('confirmPassword')">&#128065;</i>
+                            </div>
+                            <div class="account-signin">
+                                <span>Already have an account?</span>
+                                <a href="#" id="SignInLink">Sign In</a>
+                            </div>
+                            <button type="submit">Submit</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Sign In Form -->
+                <div id="signInForm" class="form-container">
+                    <div class="form-content">
+                        <span class="close-btn" id="closeSignIn">&times;</span>
+                        <h2>Sign In</h2>
+                        <form>
+                            <div class="input-wrapper">
+                                <label>Email</label>
+                                <input type="email" required>
+                            </div>
+                            <div class="input-wrapper password-container">
+                                <label>Password</label>
+                                <input type="password" required id="signInPassword">
+                                <i class="eye-icon" onclick="togglePassword('signInPassword')">&#128065;</i>
+                            </div>
+                            <div class="forgot-password">
+                                <a href="#">Forgot password?</a>
+                            </div>
+                            <button type="submit">Submit</button>
+                        </form>
+                    </div>
+                </div>
+
             </div>
             <div class="red-container">
 
@@ -109,7 +175,7 @@
 
             <!-- First Row, Second Column -->
             <div class="cell">
-                <div class="red_box">
+                <div class="red_box ">
                     <img class="animated-image" src="../Images/2014_IF_reward_Sony-removebg-preview.png" alt="Image 2">
                 </div>
                 <div class="box-content">
@@ -126,7 +192,7 @@
 
             <!-- Second Row, First Column -->
             <div class="cell">
-                <div class="red_box">
+                <div class="red_box ">
                     <img class="animated-image" src="../Images/2014_IF_reward_Sony-removebg-preview.png" alt="Image 3">
                 </div>
                 <div class="box-content">
@@ -143,7 +209,7 @@
 
             <!-- Second Row, Second Column -->
             <div class="cell">
-                <div class="red_box">
+                <div class="red_box ">
                     <img class="animated-image" src="../Images/2014_IF_reward_Sony-removebg-preview.png" alt="Image 4">
                 </div>
                 <div class="box-content">
@@ -209,6 +275,7 @@
                 <p class="rating">⭐⭐⭐⭐⭐</p>
             </div>
         </div>
+        
         <!-- All materials -->
         <div class="container6">
             <div class="slider">
@@ -228,13 +295,14 @@
                         <img src="../Images/Ferrari_Headphones-removebg-preview.png" alt="Image 4">
                     </div>
                     <div class="image-wrapper " id="image5">
-                        <img src="../Images/Bose_NEW_QuietComfort_Ultra_Wireless_Noise_Cancelling_Headphones_with_Spatial_Audio-removebg-preview.png" alt="Image 5">
+                        <img src="../Images/Bose_NEW_QuietComfort_Ultra_Wireless_Noise_Cancelling_Headphones_with_Spatial_Audio-removebg-preview.png"
+                            alt="Image 5">
                     </div>
                 </div>
                 <button id="right-button">&#9654;</button>
             </div>
         </div>
-        
+
         <!-- materials -->
         <div class="container7">
             <div class="background_red">
@@ -258,7 +326,7 @@
             </div>
             <div class="About">
                 <p class="about">About</p>
-                <p class="about_us"><a href="#">About us</a></p>
+                <p class="about_us"><a href="../HTML/About_us.html">About us</a></p>
                 <p class="delivery"><a href="#">Delivery information</a></p>
                 <p class="privacy"><a href="#">Privacy policy</a></p>
                 <p class="Terms"><a href="#">Terms & Conditions</a></p>
@@ -287,6 +355,7 @@
             </div>
         </div>
     </div>
+
 
     <script src="../Javascript/script.js"></script>
 </body>
