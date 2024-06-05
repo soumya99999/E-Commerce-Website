@@ -1,17 +1,91 @@
+document.addEventListener("DOMContentLoaded", function() {
+    setTimeout(function() {
+        document.getElementById('loading-animation').style.display = 'none';
+
+        document.getElementById('main-container').classList.remove('hidden');
+
+        const navbar = document.querySelector(".links");
+        const header = document.querySelector(".Animation-header");
+        setTimeout(function () {
+            navbar.classList.add("Animation-appear");
+            header.classList.add("Animation-appear-header");
+        }, 500);
+    }, 3000); 
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    const aboutLink = document.getElementById('about-link');
+    const contactLink = document.getElementById('contact-link');
+    const aboutSection = document.querySelector('.About');
+    const contactSection = document.querySelector('.contact_information');
+
+    function scrollToSection(section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+        section.classList.add('highlight');
+        setTimeout(() => {
+            section.classList.remove('highlight');
+        }, 2000); // Highlight for 2 seconds
+    }
+
+    aboutLink.addEventListener('click', function(event) {
+        event.preventDefault();
+        scrollToSection(aboutSection);
+    });
+
+    contactLink.addEventListener('click', function(event) {
+        event.preventDefault();
+        scrollToSection(contactSection);
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    const signUpLink = document.getElementById('signUpLink');
+    const signUpForm = document.getElementById('signUpForm');
+    const closeSignUp = document.getElementById('closeSignUp');
+    const signInLink = document.getElementById('signInLink');
+    const signInLink_signUp= document.getElementById('SignInLink');
+    const signInForm = document.getElementById('signInForm');
+    const closeSignIn = document.getElementById('closeSignIn');
+
+    signUpLink.addEventListener('click', function(event) {
+        event.preventDefault();
+        signUpForm.classList.add('show');
+    });
+
+    signInLink_signUp.addEventListener('click', function(event) {
+        event.preventDefault();
+        signInForm.classList.add('show');
+        signUpForm.classList.remove('show');
+    });
+
+    closeSignUp.addEventListener('click', function() {
+        signUpForm.classList.remove('show');
+    });
+
+    signInLink.addEventListener('click', function(event) {
+        event.preventDefault();
+        signInForm.classList.add('show');
+        signUpForm.classList.remove('show');
+    });
+    
+
+    closeSignIn.addEventListener('click', function() {
+        signInForm.classList.remove('show');
+    });
+});
+
 function toggleNavbar() {
     const links = document.querySelector('.links');
     const toggleBtn = document.querySelector('.toggle-btn');
     links.classList.toggle('active');
     toggleBtn.classList.toggle('active');
 }
-document.addEventListener("DOMContentLoaded", function () {
-    const navbar = document.querySelector(".links");
-    const header = document.querySelector(".Animation-header");
-    setTimeout(function () {
-        navbar.classList.add("Animation-appear");
-        header.classList.add("Animation-appear-header")
-    }, 500);
-});
+
+function togglePassword(id) {
+    const input = document.getElementById(id);
+    const type = input.getAttribute('type') === 'password' ? 'text' : 'password';
+    input.setAttribute('type', type);
+}
 
 document.addEventListener('scroll', function() {
     const descriptions = document.querySelectorAll('.Description');
@@ -32,10 +106,10 @@ document.addEventListener('DOMContentLoaded', function() {
     function isElementInViewport(el) {
         const rect = el.getBoundingClientRect();
         return (
-            rect.top >= 0 &&
-            rect.left >= 0 &&
-            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            rect.top < (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.bottom > 0 &&
+            rect.left < (window.innerWidth || document.documentElement.clientWidth) &&
+            rect.right > 0
         );
     }
 
@@ -60,10 +134,10 @@ document.addEventListener("DOMContentLoaded", function() {
     function isInViewport(element) {
         const rect = element.getBoundingClientRect();
         return (
-            rect.top >= 0 &&
-            rect.left >= 0 &&
-            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            rect.top < (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.bottom > 0 &&
+            rect.left < (window.innerWidth || document.documentElement.clientWidth) &&
+            rect.right > 0
         );
     }
 
@@ -131,10 +205,10 @@ document.addEventListener("DOMContentLoaded", function() {
     function isInViewport(element) {
         const rect = element.getBoundingClientRect();
         return (
-            rect.top >= 0 &&
-            rect.left >= 0 &&
-            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            rect.top < (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.bottom > 0 &&
+            rect.left < (window.innerWidth || document.documentElement.clientWidth) &&
+            rect.right > 0
         );
     }
 
@@ -149,5 +223,5 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     window.addEventListener("scroll", checkScroll);
-    checkScroll(); 
+    checkScroll();
 });
