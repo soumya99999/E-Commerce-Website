@@ -2,7 +2,6 @@ body {
     max-height: 2000vh;
     margin: 0;
     padding: 0;
-    background-color: #111010;
 }
 
 html,
@@ -318,4 +317,171 @@ body::-webkit-scrollbar {
     .overlay p {
         font-size: 0.75rem;
     }   
+}
+
+/* Add_to_cart.css */
+
+
+
+.container2_cart input {
+    width: 40px;
+    padding:0;
+}
+
+
+
+.container2_cart {
+    background: #111010;
+    box-shadow: 7px 7px 15px #0b0b0b, -7px -7px 15px #171717;
+    padding: 20px;
+}
+
+.container2_cart table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.container2_cart th, .container2_cart td {
+    border: none;
+    padding: 15px;
+    text-align: center;
+    color: #f5f5f5;
+}
+
+.container2_cart th {
+    background: #111010;
+    border-radius: 10px;
+    box-shadow: inset 5px 5px 10px #0b0b0b, inset -5px -5px 10px #171717;
+    font-weight: bold;
+}
+
+.container2_cart td {
+    background: #111010;
+    border-radius: 10px;
+    box-shadow: inset 5px 5px 10px #0b0b0b, inset -5px -5px 10px #171717;
+}
+
+.container2_cart img {
+    max-width: 50px;
+    height: auto;
+}
+
+.container2_cart .remove-item {
+    cursor: pointer;
+    color: #f00;
+    font-size: 1.2em;
+}
+
+.container2_cart input[type="number"] {
+    width: 50px;
+    background: #111010;
+    border: none;
+    border-radius: 10px;
+    box-shadow: inset 5px 5px 10px #0b0b0b, inset -5px -5px 10px #171717;
+    text-align: center;
+    color: #f5f5f5;
+}
+
+.container2_cart table tr:not(:first-child) {
+    margin-top: 10px;
+}
+
+.container2_cart th, .container2_cart td {
+    margin-bottom: 10px;
+}
+
+
+.container3_cart {
+    min-height: 70vh;
+    background: #000;
+    box-shadow: 7px 7px 15px #0b0b0b, -7px -7px 15px #171717;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    gap: 10px;
+    color: white;
+    padding: 20px;
+}
+
+.contact_information,
+.About,
+.My_Account,
+.Secured_Payments {
+    background: #000;
+    border-radius: 10px;
+    box-shadow: inset 5px 5px 10px #0b0b0b, inset -5px -5px 10px #171717;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-left: 30px;
+    margin-top: 10px;
+    padding: 20px;
+}
+
+.About a,
+.My_Account a {
+    text-decoration: none;
+    color: white;
+}
+
+.contact_information p:first-child,
+.About p:first-child,
+.My_Account p:first-child,
+.Secured_Payments p:first-child {
+    font-weight: bold;
+    font-size: 1.6rem;
+}
+
+.payment_icons i {
+    margin: 5px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.subscription_form {
+    margin-top: 20px;
+}
+
+.subscription_form input[type="email"] {
+    padding: 5px;
+    margin-right: 5px;
+    border-radius: 5px;
+    border: none;
+    background-color: #333; 
+    color: #fff; 
+    box-shadow: inset 5px 5px 10px #0b0b0b, inset -5px -5px 10px #171717;
+    outline: none;
+}
+
+.subscription_form button {
+    padding: 5px 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 1300px) {
+    .subscription_form button {
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 1025px) {
+    .container3_cart {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .container3_cart {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        gap: 10px;
+    }
 }

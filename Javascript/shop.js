@@ -124,3 +124,30 @@ document.addEventListener("DOMContentLoaded", function() {
     window.addEventListener("scroll", checkScroll);
     checkScroll();
 });
+
+
+// JavaScript to handle adding items to the cart
+document.addEventListener('DOMContentLoaded', () => {
+    const cartButtons = document.querySelectorAll('.add-to-cart');
+    cartButtons.forEach(button => {
+        button.addEventListener('click', addToCart);
+    });
+});
+
+function addToCart(event) {
+    const item = event.currentTarget.closest('.grid-item');
+    const productImage = item.querySelector('img').src;
+    const productName = item.querySelector('.product-details h3').innerText;
+    const productPrice = item.querySelector('.product-details p:nth-child(2)').innerText;
+
+    const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+    cartItems.push({
+        name: productName,
+        image: productImage,
+        price: productPrice,
+        quantity: 1
+    });
+    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+
+    alert(`${productName} has been added to the cart!`);
+}
