@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Website</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+    <div id="loading-animation">
+        <div class="spinner"></div>
+    </div>
+    <div id="main-container" class="main-container hidden">
+        <div class="background container1">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="../Images/logo-removebg-preview.png" alt="Logo">
+                </div>
+                <div class="toggle-btn" onclick="toggleNavbar()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <div class="navbar-contents">
+                    <ul class="links">
+                        <li><a href="#" class="home-link" >Home</a></li>
+                        <li><a href="../HTML/shop.html">Shop</a></li>
+                        <li><a href="../HTML/Blog.html">Blog</a></li>
+                        <li><a href="../HTML/About_us.html" id="about-link">About</a></li>
+                        <li><a href="#" id="contact-link">Contact</a></li>
+                        <li><a href="#" id="signUpLink">Sign Up</a></li>
+                        <li><a href="#" id="signInLink">Sign In</a></li>
+                        <li><a href="../HTML/Add_to_cart.html"><i class="fas fa-shopping-cart"></i> </a></li>
+                    </ul>
+                </div>
+
+                <!-- Sign Up Form -->
+                <div id="signUpForm" class="form-container">
+                    <div class="form-content">
+                        <span class="close-btn" id="closeSignUp">&times;</span>
+                        <h2>Sign Up</h2>
+                        <form>
+                            <div class="input-wrapper">
+                                <label class="Label">Name</label>
+                                <input type="text" required>
+                            </div>
+                            <div class="input-wrapper">
+                                <label class="Label">Email</label>
+                                <input type="email" required>
+                            </div>
+                            <div class="input-wrapper">
+                                <label class="Label">Phone Number</label>
+                                <input type="tel" required>
+                            </div>
+                            <div class="input-wrapper password-container">
+                                <label class="Label">Password</label>
+                                <input type="password" required id="password">
+                                <i class="eye-icon" onclick="togglePassword('password')">&#128065;</i>
+                            </div>
+                            <div class="input-wrapper password-container">
+                                <label class="Label">Confirm Password</label>
+                                <input type="password" required id="confirmPassword">
+                                <i class="eye-icon" onclick="togglePassword('confirmPassword')">&#128065;</i>
+                            </div>
+                            <div class="account-signin">
+                                <span>Already have an account?</span>
+                                <a href="#" id="SignInLink">Sign In</a>
+                            </div>
+                            <button type="submit">Submit</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Sign In Form -->
+                <div id="signInForm" class="form-container">
+                    <div class="form-content">
+                        <span class="close-btn" id="closeSignIn">&times;</span>
+                        <h2>Sign In</h2>
+                        <form>
+                            <div class="input-wrapper">
+                                <label>Email</label>
+                                <input type="email" required>
+                            </div>
+                            <div class="input-wrapper password-container">
+                                <label>Password</label>
+                                <input type="password" required id="signInPassword">
+                                <i class="eye-icon" onclick="togglePassword('signInPassword')">&#128065;</i>
+                            </div>
+                            <div class="forgot-password">
+                                <a href="#">Forgot password?</a>
+                            </div>
+                            <button type="submit">Submit</button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+            <div class="red-container">
+
+            </div>
+            <div class="TextPart Animation-header">
+                <h1>Welcome to our shop</h1>
+            </div>
+            <div class="background-image">
+                <div class="image-HeadPhone Animation-headphone">
+                    <img class="bouncing-image"
+                        src="../Images/3D_Headphone_3.png"
+                        alt="">
+                </div>
+                <div class="red-circle-container1">
+                    <div class="image-earbud1 Animation-left-earbud">
+                        <img class="bouncing-image"
+                            src="../Images/3D_earbud_4.png"
+                            alt="">
+                    </div>
+                </div>
+                <div class="red-circle-container2">
+                    <div class="image-earbud2 Animation-right-earbud">
+                        <img class="bouncing-image" src="../Images/3D_earbud_8.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+        <!-- 30days money back, safe payment ,free shipping , Loyalty Customer -->
+        <div class="container3">
+            <div class="contents">
+                <ul>
+                    <li class="feature">
+                        <i class="fas fa-undo-alt"></i>
+                        <p>30 days money back</p>
+                    </li>
+                    <li class="feature">
+                        <i class="fas fa-lock"></i>
+                        <p>Safe payment</p>
+                    </li>
+                    <li class="feature">
+                        <i class="fas fa-shipping-fast"></i>
+                        <p>Free shipping</p>
+                    </li>
+                    <li class="feature">
+                        <i class="fas fa-gift"></i>
+                        <p>Loyalty Customer</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container4">
+            <!-- First Row, First Column -->
+            <div class="cell">
+                <div class="red_box">
+                    <img class="animated-image" src="../Images/3D_Headphone_2.png" alt="Image 1">
+                </div>
+                <div class="box-content">
+                    <div class="options">
+                        <p class="Description">Experience crystal-clear sound and unbeatable comfort with our
+                            top-of-the-line earbuds—your perfect companion for music, calls, and more!</p>
+                        <button class="booking">Book Now</button>
+                        <button class="add-to-cart">Add to Cart</button>
+                        <p class="price">1000</p>
+                        <p class="rating">⭐⭐⭐⭐⭐</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- First Row, Second Column -->
+            <div class="cell">
+                <div class="red_box ">
+                    <img class="animated-image" src="../Images/3D_Headphone_2.png" alt="Image 2">
+                </div>
+                <div class="box-content">
+                    <div class="options">
+                        <p class="Description">Experience crystal-clear sound and unbeatable comfort with our
+                            top-of-the-line earbuds—your perfect companion for music, calls, and more!</p>
+                        <button class="booking">Book Now</button>
+                        <button class="add-to-cart">Add to Cart</button>
+                        <p class="price">1000</p>
+                        <p class="rating">⭐⭐⭐⭐⭐</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Second Row, First Column -->
+            <div class="cell">
+                <div class="red_box ">
+                    <img class="animated-image" src="../Images/3D_Headphone_2.png" alt="Image 3">
+                </div>
+                <div class="box-content">
+                    <div class="options">
+                        <p class="Description">Experience crystal-clear sound and unbeatable comfort with our
+                            top-of-the-line earbuds—your perfect companion for music, calls, and more!</p>
+                        <button class="booking">Book Now</button>
+                        <button class="add-to-cart">Add to Cart</button>
+                        <p class="price">1000</p>
+                        <p class="rating">⭐⭐⭐⭐⭐</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Second Row, Second Column -->
+            <div class="cell">
+                <div class="red_box ">
+                    <img class="animated-image" src="../Images/3D_Headphone_2.png" alt="Image 4">
+                </div>
+                <div class="box-content">
+                    <div class="options">
+                        <p class="Description">Experience crystal-clear sound and unbeatable comfort with our
+                            top-of-the-line earbuds—your perfect companion for music, calls, and more!</p>
+                        <button class="booking">Book Now</button>
+                        <button class="add-to-cart">Add to Cart</button>
+                        <p class="price">1000</p>
+                        <p class="rating">⭐⭐⭐⭐⭐</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- All materials -->
+        <div class="container5">
+            <div class="item">
+                <img src="../Images/3D_Headphone_9.png" alt="Product 1">
+                <p class="price">$99.99</p>
+                <p class="rating">⭐⭐⭐⭐⭐</p>
+            </div>
+            <div class="item">
+                <img src="../Images/3D_Headphone_9.png" alt="Product 2">
+                <p class="price">$109.99</p>
+                <p class="rating">⭐⭐⭐⭐</p>
+            </div>
+            <div class="item">
+                <img src="../Images/3D_Headphone_9.png" alt="Product 3">
+                <p class="price">$89.99</p>
+                <p class="rating">⭐⭐⭐⭐⭐</p>
+            </div>
+            <div class="item">
+                <img src="../Images/3D_Headphone_9.png" alt="Product 4">
+                <p class="price">$129.99</p>
+                <p class="rating">⭐⭐⭐</p>
+            </div>
+            <div class="item">
+                <img src="../Images/3D_Headphone_9.png" alt="Product 5">
+                <p class="price">$99.99</p>
+                <p class="rating">⭐⭐⭐⭐</p>
+            </div>
+            <div class="item">
+                <img src="../Images/3D_Headphone_9.png" alt="Product 5">
+                <p class="price">$99.99</p>
+                <p class="rating">⭐⭐⭐⭐</p>
+            </div>
+            <div class="item">
+                <img src="../Images/3D_Headphone_9.png"
+                    alt="Product 5">
+                <p class="price">$99.99</p>
+                <p class="rating">⭐⭐⭐⭐</p>
+            </div>
+            <div class="item">
+                <img src="../Images/3D_Headphone_9.png"
+                    alt="Product 6">
+                <p class="price">$119.99</p>
+                <p class="rating">⭐⭐⭐⭐⭐</p>
+            </div>
+            <div class="item span-rows">
+                <img src="../Images/3D_Headphone_9.png" alt="Product 7">
+                <p class="price">$149.99</p>
+                <p class="rating">⭐⭐⭐⭐⭐</p>
+            </div>
+        </div>
+        
+        <!-- All materials -->
+        <div class="container6">
+            <div class="slider">
+                <button id="left-button">&#9664;</button>
+                <div class="image-container">
+                    <div class="image-wrapper" id="image1">
+                        <img src="../Images/3D_Headphone_9.png" alt="Image 1">
+                    </div>
+                    <div class="image-wrapper" id="image2">
+                        <img src="../Images/3D_Headphone_9.png" alt="Image 2">
+                    </div>
+                    <div class="image-wrapper" id="image3">
+                        <img src="../Images/3D_Headphone_9.png"
+                            alt="Image 3">
+                    </div>
+                    <div class="image-wrapper" id="image4">
+                        <img src="../Images/3D_Headphone_9.png" alt="Image 4">
+                    </div>
+                    <div class="image-wrapper " id="image5">
+                        <img src="../Images/3D_Headphone_9.png"
+                            alt="Image 5">
+                    </div>
+                </div>
+                <button id="right-button">&#9654;</button>
+            </div>
+        </div>
+
+        <!-- materials -->
+        <div class="container7">
+            <div class="background_red">
+                <div class="image7">
+                    <img class="above_image animated_image" src="../Images/3D_Headphone_12.png" alt="">
+                </div>
+                <div class="box7-contents">
+                    <p class="description7">You Love it's sound</p>
+                    <button class="button7" type="button">shop now</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Information -->
+        <div class="container8">
+            <div class="contact_information">
+                <p class="contact">Contact</p>
+                <p class="address">Address: 1234 Main St, Anytown, USA</p>
+                <p class="phone">Phone: +91 7847871510</p>
+                <p class="hours">Timing: Mon-Fri: 9am - 6pm</p>
+            </div>
+            <div class="About">
+                <p class="about">About</p>
+                <p class="about_us"><a href="../HTML/About_us.html">About us</a></p>
+                <p class="delivery"><a href="#">Delivery information</a></p>
+                <p class="privacy"><a href="#">Privacy policy</a></p>
+                <p class="Terms"><a href="#">Terms & Conditions</a></p>
+            </div>
+            <div class="My_Account">
+                <p class="account">My Account</p>
+                <p class="view_cart"><a href="../HTML/Add_to_cart.html">View Cart</a></p>
+                <p class="my_wishlist"><a href="#">My Wishlist</a></p>
+                <p class="track"><a href="#">Track my order</a></p>
+                <p class="help"><a href="#">Help</a></p>
+            </div>
+            <div class="Secured_Payments">
+                <p class="payment">Secured Payment</p>
+                <div class="payment_icons">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                    <i class="fab fa-cc-amex"></i>
+                    <i class="fab fa-cc-discover"></i>
+                </div>
+                <div class="subscription_form">
+                    <p>Subscribe to our newsletter:</p>
+                    <input type="email" placeholder="Enter your email" />
+                    <button>Subscribe</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="../Javascript/script.js"></script>
+</body>
+
+</html>
